@@ -8,8 +8,8 @@ namespace ConsoleCalculator
         static void Main(string[] args)
         {
             var ui = new UserInterface();
-            var service = new CalculateService();
-            double result = 0;
+            var logic = new CalculateService();
+            double result;
 
             ui.ShowMenuOperator();
             ui.ShowInputNumbers();
@@ -24,19 +24,19 @@ namespace ConsoleCalculator
                 switch (operators)
                 {
                     case '+':
-                        result = service.Add(listNumbers);
+                        result = logic.Add(listNumbers);
                         ui.ShowResult(result, operators, listNumbers);
                         break;
                     case '-':
-                        result = service.Sub(listNumbers);
+                        result = logic.Sub(listNumbers);
                         ui.ShowResult(result, operators, listNumbers);
                         break;
                     case '*':
-                        result = service.Mul(listNumbers);
+                        result = logic.Mul(listNumbers);
                         ui.ShowResult(result, operators, listNumbers);
                         break;
                     case '/':
-                        result = service.Div(listNumbers);
+                        result = logic.Div(listNumbers);
                         ui.ShowResult(result, operators, listNumbers);
                         break;
                 }

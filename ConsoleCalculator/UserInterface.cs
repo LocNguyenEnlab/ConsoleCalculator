@@ -7,6 +7,7 @@ namespace ConsoleCalculator
     {
         public char _operator;
         public List<double> _listNumbers;
+
         public UserInterface()
         {
         }
@@ -25,7 +26,8 @@ namespace ConsoleCalculator
                 if (_operator == '+' || _operator == '-' || _operator == '*' || _operator == '/')
                 {
                     break;
-                } else
+                }
+                else
                 {
                     Console.Write("Invalid operator, please input operator again: ");
                 }
@@ -73,7 +75,8 @@ namespace ConsoleCalculator
                 if (i == listNumbers.Count - 1)
                 {
                     break;
-                } else
+                }
+                else
                 {
                     Console.Write(" {0} ", operators);
                 }

@@ -47,10 +47,6 @@ namespace ConsoleCalculator
 
             for (int i = 1; i < listNumbers.Count; i++)
             {
-                if (listNumbers[i] == 0)
-                {
-
-                }
                 result /= listNumbers[i];
             }
             return result;
